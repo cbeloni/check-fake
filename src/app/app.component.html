@@ -3,6 +3,7 @@
   <h1>
     Check Fake
   </h1>
+  <hr>
 </div>
 <div class="container">
   <h2>Envie um meme para checkar se é fake </h2>
@@ -10,10 +11,19 @@
   <br>
   <br>
   <form>
-    <div class="form-group">
+    <div class="form-group col-md-4">
       <label for="inputMeme">Enviar imagem do seu computador</label>
       <input type="file" class="form-control-file" id="inputMeme">
     </div>
+    <div class="form-group">
+      <span class="col-md-1"></span>
+      <span>ou</span>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputMemeUrl">Envie imagem a partir de uma URL:</label>
+      <input id="inputMemeUrl" type="text" class="form-control"/>
+    </div>
+    <br><br>
     <div class="form-group">
       <button type="button" class="btn btn-primary">Enviar</button>
     </div>
