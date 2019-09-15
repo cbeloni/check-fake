@@ -41,7 +41,6 @@ export class AppComponent {
     formData.append('nome', meme.nome);
     this.memeService.SalvarMeme(formData ).subscribe(
       (res) => {
-        console.log(res);
         this.memes.push(meme);
         this.mensagem = "Imagem provavelmente fake!"
         this.compartilhe =  "Compartilhe o resultado: http://check-fake.com/id=" + res.id;
