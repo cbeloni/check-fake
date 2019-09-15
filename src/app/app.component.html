@@ -1,46 +1,31 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    {{title}}
+    Check Fake
   </h1>
   <hr>
 </div>
 <div class="container">
-  <h2 style="text-align: center">Envie uma imagem para checar se é fake</h2>
+  <h2>Envie um meme para checkar se é fake </h2>
   <br>
-  <div class="row justify-content-md-center">
-    <form [formGroup]="memeForm" >
-      <div class="form-group ">
-        <label for="inputMeme"></label>
-        
-        <div class="custom-file">
-          <input type="file" class="form-control-file" id="inputMeme" (change)="onFileSelect($event)">
-          <label class="form-control-file" for="inputMeme"></label>
-        </div>
-      </div>
-      <div class="form-group" [hidden]="true">
-        <p style="text-align: center">ou</p>
-      </div>
-      <div class="form-group " >
-        <input id="inputMemeUrl" type="text" class="form-control" placeholder="Por uma URL" formControlName="imagem" [hidden]="true"/>
-      </div>
-      <br><br>
-      <div class="form-group ">
-        <input id="inputMemeDesc" type="text" class="form-control" placeholder="Descrição da imagem" formControlName="nome"/>
-      </div>
-      <br>
-      <div class="form-group" style="text-align: center">
-        <button type="button" class="btn btn-primary" (click)="salvar(memeForm.value)">Verificar</button>
-      </div>   
-      <div class="alert alert-info" role="alert" [hidden]="!mensagem"> 
-          {{mensagem}} 
-      </div>
-      <p>{{compartilhe}}</p>
-      <br><br><br>
-      <p>Total de imagens em nosso banco de dados: {{memes.length}}</p>  
-    </form>
-  </div>
-  
-  <!-- <p *ngFor="let meme of memes">{{meme.nome}} - {{meme.isFake}} =>  {{memes.length}}
-  </p> -->
+  <br>
+  <br>
+  <form>
+    <div class="form-group col-md-4">
+      <label for="inputMeme">Enviar meme do seu computador</label>
+      <input type="file" class="form-control-file" id="inputMeme">
+    </div>
+    <div class="form-group">
+      <span class="col-md-1"></span>
+      <span>ou</span>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputMemeUrl">Envie meme a partir de uma URL:</label>
+      <input id="inputMemeUrl" type="text" class="form-control"/>
+    </div>
+    <br><br>
+    <div class="form-group">
+      <button type="button" class="btn btn-primary">Verificar</button>
+    </div>
+  </form>
 </div>
