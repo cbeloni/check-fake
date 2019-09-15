@@ -17,23 +17,22 @@ export class AppComponent {
   memeForm: FormGroup;
   mensagem: '';
 
-    
   arrayBufferToBase64 = function (buffer) {
     return btoa(
       new Uint8Array(buffer)
         .reduce((data, byte) => data + String.fromCharCode(byte), '')
     );
-  }
+  };
   onFileSelect(event) {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
       this.memeForm.get('profile').setValue(file);
     }
-  }
+  };
+  
   sucesso = function (meme){
-    console.log("funcionou");
     this.memes = meme;
-  }
+  };
 
   salvar = function(meme){
     const formData = new FormData();
@@ -48,14 +47,15 @@ export class AppComponent {
       (err) => {
           console.log(err);
           this.mensagem = "Erro ao enviar mensagem";
-    );
-  }
+      });
+  };
   
   constructor(private memeService: MemeService, private formBuider: FormBuilder){
     memeService.ListarMemes().subscribe(memes => this.sucesso(memes) ,
                                         error => console.log('Error: ' + error));
-  }
+  };
+
   ngOnInit(): void {
     this.memeForm = this.formBuider.group({imagem: "", nome: "", profile: ['']});
-}
-}
+  };
+}  
