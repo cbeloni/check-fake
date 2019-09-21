@@ -4,10 +4,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { MemeComponent } from './meme/meme.component';
+import { ListaMemesComponent } from './lista-memes/lista-memes.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MemeComponent,
+    ListaMemesComponent
   ],
   imports: [
     BrowserModule,
