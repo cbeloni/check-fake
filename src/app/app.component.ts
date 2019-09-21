@@ -47,7 +47,7 @@ export class AppComponent {
       },
       (err) => {
           console.log(err);
-          this.mensagem = "Erro ao enviar mensagem";
+          this.mensagem = "Erro ao enviar imagem";
       });
   };
   
