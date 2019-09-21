@@ -39,7 +39,6 @@
       <br><br><br>
       <p>Total de imagens em nosso banco de dados: {{memes.length}}</p>  
       <fc-meme *ngFor="let meme of memes.slice().reverse()" url="data:image/jpeg;base64,{{meme.imagem}}" description="meme.nome"></fc-meme>
-      <lista-memes></lista-memes>
     </form>
   </div>
   
