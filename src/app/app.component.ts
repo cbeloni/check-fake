@@ -16,6 +16,7 @@ export class AppComponent {
   meme = {};
   memeForm: FormGroup;
   mensagem: '';
+  compartilhe: '';
 
   arrayBufferToBase64 = function (buffer) {
     return btoa(
