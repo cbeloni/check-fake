@@ -19,7 +19,7 @@ export class AppComponent {
   compartilhe: '';
 
   constructor(private memeService: MemeService, private formBuider: FormBuilder){
-    memeService.ListarMemes().subscribe(memes => this.sucesso(memes) ,
+    memeService.ListarMemes().subscribe(memes => this.sucesso(memes.content) ,
                                         error => console.log('Error: ' + error));
   };
 
@@ -39,7 +39,7 @@ export class AppComponent {
       this.memeForm.get('profile').setValue(file);
     }
   };
-  
+
   sucesso = function (meme){
     this.memes = meme;
   };
@@ -59,4 +59,4 @@ export class AppComponent {
           this.mensagem = "Erro ao enviar imagem";
       });
   };
-}  
+}

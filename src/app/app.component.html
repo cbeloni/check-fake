@@ -12,7 +12,7 @@
     <form [formGroup]="memeForm" >
       <div class="form-group ">
         <label for="inputMeme"></label>
-        
+
         <div class="custom-file">
           <input type="file" class="form-control-file" id="inputMeme" (change)="onFileSelect($event)">
           <label class="form-control-file" for="inputMeme"></label>
@@ -31,18 +31,18 @@
       <br>
       <div class="form-group" style="text-align: center">
         <button type="button" class="btn btn-primary" (click)="salvar(memeForm.value)">Verificar</button>
-      </div>   
-      <div class="alert alert-info" role="alert" [hidden]="!mensagem"> 
-          {{mensagem}} 
+      </div>
+      <div class="alert alert-info" role="alert" [hidden]="!mensagem">
+          {{mensagem}}
       </div>
       <p>{{compartilhe}}</p>
       <br><br><br>
-      
+
     </form>
   </div>
-  <p>Total de imagens em nosso banco de dados: {{memes.length}}</p>  
+  <p>Total de imagens em nosso banco de dados: {{memes.length}}</p>
   <fc-meme *ngFor="let meme of memes.slice().reverse()" url="data:image/jpeg;base64,{{meme.imagem}}" description="meme.nome"></fc-meme>
-  
+
   <!-- <p *ngFor="let meme of memes">{{meme.nome}} - {{meme.isFake}} =>  {{memes.length}}
   </p> -->
 </div>
