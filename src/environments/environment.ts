@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://check-back.herokuapp.com'
+  baseUrl: 'https://checkfake-service.herokuapp.com'
 };
 
 /*
